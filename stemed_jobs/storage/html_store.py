@@ -30,26 +30,27 @@ def _external_link(url: str, text: str) -> str:
         escape(url, quote=True), escape(text))
 
 
-COLLECTION_URL = "https://works.hcommons.org/collections/humetainstrumentlibrary/"
-STEMEDPLUS_COLLECTION_URL = "https://works.hcommons.org/collections/stemedplus/"
-KC_JOIN_URL = "https://support.hcommons.org/profiles/login-and-registration/"
+LIBRARY_URL = "https://works.hcommons.org/collections/stemedplus/"
+DATA_URL = "https://works.hcommons.org/collections/stemedplus-data/"
+STEMEDPLUS_HOME_URL = "https://stemedplus.org/"
+JOIN_URL = "https://stemedplus.org/join-stemed/"
 
 
 def _join_box(where: str) -> str:
-    """The STEMEd+ Commons invitation shown at the top and bottom of the page."""
+    """The STEMEd+ Commons invitation shown at the top and bottom of the page (same wording on every STEMEd+ site)."""
     return (
         '<div class="join join-{}" role="note"><p><strong>STEMEd+ Jobs is part of STEMEd+ Commons</strong>, which brings together teachers, researchers, and learning professionals from every field to share work, find each other, and build what comes next. '
-        "Join to deposit instruments in the {}, share your work in the {}, follow new work, and connect with "
-        "STEM+ education researchers. You can sign in with GitHub, Google, ORCID, or your institution.</p>"
+        "Join to set up your profile, add papers, posters, slides, and other work to the {} with a DOI, share datasets "
+        "in {}, and connect with teachers and researchers across fields. You can sign in through your institution, "
+        "ORCID, or another provider.</p>"
         "<p>{} · {}</p></div>"
     ).format(
         where,
-        _external_link(COLLECTION_URL, "HuMeta Instrument Library collection"),
-        _external_link(STEMEDPLUS_COLLECTION_URL, "STEMEd+ collection"),
-        _external_link(COMMONS_URL, "Visit STEMEd+ Commons"),
-        _external_link(KC_JOIN_URL, "How to join"),
+        _external_link(LIBRARY_URL, "STEMEd+ Library"),
+        _external_link(DATA_URL, "STEMEd+ Data"),
+        _external_link(STEMEDPLUS_HOME_URL, "Visit STEMEd+ Commons"),
+        _external_link(JOIN_URL, "Join STEMEd+"),
     )
-
 
 LOGO_FILE = Path(__file__).with_name("stemedplus-commons-logo.png")
 THEME_FILES = ("stemedplus-commons-logo-white.png", "stemedplus-theme.css", "manrope.woff")
