@@ -41,10 +41,13 @@ An editor adds the approved label; the position then appears on STEMEd+ Jobs.
 - Help text: Leave blank if none fit; we will sort it by its text.
 - Choices:
     - Agriculture
+    - Astronomy & Space Science
     - Bioscience
     - Chemistry
+    - Computing
     - Earth Science
     - Engineering
+    - Environmental Science
     - Health Education
     - History & Philosophy of Science
     - Human Dimensions

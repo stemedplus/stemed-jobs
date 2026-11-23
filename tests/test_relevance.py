@@ -84,9 +84,10 @@ class SubfieldEducationTests(unittest.TestCase):
             ("Biochemistry Education Research Postdoc", "Chemistry"),
             ("Entomology Education Postdoc", "Bioscience"),
             ("Animal Science Education Postdoc", "Bioscience"),
-            ("Astronomy Education Research Postdoc", "Physics"),
-            ("Space Science Education Postdoc", "Physics"),
-            ("Environmental Education Postdoc", "Earth Science"),
+            ("Astronomy Education Research Postdoc", "Astronomy & Space Science"),
+            ("Space Science Education Postdoc", "Astronomy & Space Science"),
+            ("Environmental Education Postdoc", "Environmental Science"),
+            ("Computer Science Education Postdoc", "Computing"),
             ("Chemical Education Postdoc", "Chemistry"),
         ):
             self.assertTrue(is_stem_education_relevant(_job(title, disciplines=(discipline,)), discipline), title)

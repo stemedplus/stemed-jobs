@@ -150,14 +150,14 @@ job may have both research and teaching functions. Audience categories are
 inferred from the title, while functions are inferred from the title and
 description.
 
-Jobs also have a `disciplines` array using thirteen labels: Agriculture,
-Bioscience, Chemistry, Earth Science, Engineering, Health Education, History &
-Philosophy of Science, Human Dimensions, Learning Science, Mathematics, Physics, Science & Health
-Communication, and Science Education. The labels, their definitions and the
+Jobs also have a `disciplines` array using the seventeen STEMEd+ discipline labels: Agriculture,
+Astronomy & Space Science, Bioscience, Chemistry, Computing, Earth Science, Engineering, Environmental
+Science, Health Education, History & Philosophy of Science, Human Dimensions, Learning Science,
+Mathematics, Physics, Science & Health Communication, Science Education, and STEAM: Arts+STEM. The labels, their definitions and the
 words that match them come from the STEMEd+ discipline list shared across
-STEMEd+ Commons (the [HuMeta profile](https://github.com/stemedplus/humeta-profile)'s `stemedplus_disciplines.json`, stored
+STEMEd+ Commons ([stemedplus-theme](https://github.com/stemedplus/stemedplus-theme)'s `stemedplus_disciplines.json`, stored
 here as `stemed_jobs/stemedplus_disciplines.json`); each run refreshes the
-stored copy from HuMeta and keeps it if the download fails. History &
+stored copy from stemedplus-theme and keeps it if the download fails. History &
 Philosophy of Science covers HPS, history of medicine and technology, science
 and technology studies, and the nature of science; Science & Health
 Communication covers science, health, risk, climate and environmental
@@ -236,7 +236,7 @@ ask for science communication skills.
 Curriculum specialist, writer, coordinator, developer, and designer jobs (in K-12 or
 higher education; the word "curriculum" alone does not make a job Learning Science) are listed when they are STEM or in a followed discipline: under the
 discipline the title names ("Biology Curriculum Specialist"; "math" counts as Mathematics,
-"computer science" as Engineering, and a bare "science" as Science Education), under every
+"computer science" as Computing, and a bare "science" as Science Education), under every
 discipline when the title says STEM in general ("STEM Curriculum Writer"), and otherwise
 under disciplines the posting gives evidence for (its department, or repeated mentions).
 They are staff jobs unless the title makes them graduate, postdoctoral, or faculty positions.

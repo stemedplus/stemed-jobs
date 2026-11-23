@@ -1,7 +1,10 @@
 import re
 from typing import Dict, Pattern
 
-from stemed_jobs.disciplines import BIOSCIENCE_TERMS, CHEMISTRY_TERMS, EARTH_TERMS, HEALTH_TERMS, PHYSICS_TERMS
+from stemed_jobs.disciplines import (
+    ASTRONOMY_TERMS, BIOSCIENCE_TERMS, CHEMISTRY_TERMS, COMPUTING_TERMS, EARTH_TERMS, ENVIRONMENTAL_TERMS, HEALTH_TERMS,
+    PHYSICS_TERMS,
+)
 from stemed_jobs import stemedplus_disciplines as shared
 from stemed_jobs.disciplines import DISCIPLINE_RULES, is_curriculum_role, matching_disciplines, without_non_science_education
 from stemed_jobs.models import Job
@@ -9,10 +12,13 @@ from stemed_jobs.models import Job
 
 _STEM_DISCIPLINES = {
     "Agriculture",
+    "Astronomy & Space Science",
     "Bioscience",
     "Chemistry",
+    "Computing",
     "Earth Science",
     "Engineering",
+    "Environmental Science",
     "Mathematics",
     "Physics",
 }
@@ -28,8 +34,11 @@ _DISCIPLINE_SIGNALS: Dict[str, Pattern[str]] = {
     "Chemistry": re.compile(
         _education_in(CHEMISTRY_TERMS) + r"|\bchemical education\b|\b(?-i:CER)\b", re.IGNORECASE
     ),
-    "Earth Science": re.compile(
-        _education_in(EARTH_TERMS) + r"|\benvironmental education\b|\b(?-i:GER)\b", re.IGNORECASE
+    "Astronomy & Space Science": re.compile(_education_in(ASTRONOMY_TERMS), re.IGNORECASE),
+    "Earth Science": re.compile(_education_in(EARTH_TERMS) + r"|\b(?-i:GER)\b", re.IGNORECASE),
+    "Environmental Science": re.compile(
+        _education_in(ENVIRONMENTAL_TERMS) + r"|\benvironmental education\b|\bsustainability education\b",
+        re.IGNORECASE,
     ),
     "Bioscience": re.compile(_education_in(BIOSCIENCE_TERMS) + r"|\b(?-i:BER)\b", re.IGNORECASE),
     "Health Education": re.compile(
@@ -37,8 +46,9 @@ _DISCIPLINE_SIGNALS: Dict[str, Pattern[str]] = {
         r"|\bnursing education\b|\bhealth professions education\b",
         re.IGNORECASE,
     ),
-    "Engineering": re.compile(
-        r"\bengineering education\b|\b(?-i:EER)\b|\b(?:computer science|computing|CS) education\b"
+    "Engineering": re.compile(r"\bengineering education\b|\b(?-i:EER)\b", re.IGNORECASE),
+    "Computing": re.compile(
+        _education_in(COMPUTING_TERMS) + r"|\b(?:computer science|computing|CS) education\b"
         r"|\bcomputing education research\b|\b(?-i:CER) in computing\b",
         re.IGNORECASE,
     ),
@@ -85,8 +95,8 @@ _DBER: Pattern[str] = re.compile(r"\bDBER\b", re.IGNORECASE)
 _EDUCATION_DOCTORATE: Pattern[str] = re.compile(
     r"\b(?:Ph\.?\s?D\.?|Ed\.?\s?D\.?|doctorate|doctoral degree)"
     r"\s+(?:degree\s+)?in\s+"
-    r"(?:STEM|science|physics|chemistry|biology|bioscience|earth science|"
-    r"geoscience|environmental science|engineering|mathematics|math|"
+    r"(?:STEM|science|physics|astronomy|chemistry|biology|bioscience|earth science|"
+    r"geoscience|environmental science|engineering|computer science|computing|mathematics|math|"
     r"agricultural)?\s*education\b"
     r"|\b(?:Ph\.?\s?D\.?|Ed\.?\s?D\.?|doctorate|doctoral degree)"
     r"\s+(?:degree\s+)?in\s+(?:learning sciences?|educational psychology|DBER|SoTL)\b",

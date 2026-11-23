@@ -12,6 +12,9 @@ EARTH_TERMS = shared.terms("earth_science")
 CHEMISTRY_TERMS = shared.terms("chemistry")
 BIOSCIENCE_TERMS = shared.terms("bioscience")
 PHYSICS_TERMS = shared.terms("physics")
+ASTRONOMY_TERMS = shared.terms("astronomy_space")
+ENVIRONMENTAL_TERMS = shared.terms("environmental_science")
+COMPUTING_TERMS = shared.terms("computing")
 HEALTH_TERMS = shared.terms("health_education")
 
 # Acronyms such as PER, CER, GER and BER match only when written in capitals;
@@ -114,7 +117,7 @@ _GENERAL_STEM = re.compile(r"\b(?-i:STEM|STEAM|STEMM)\b", re.IGNORECASE)
 # Short subject words common in curriculum titles but not discipline terms themselves.
 _CURRICULUM_SUBJECTS = (
     ("Mathematics", re.compile(r"\bmaths?\b", re.IGNORECASE)),
-    ("Engineering", re.compile(r"\bcomputer science\b|\bcomputing\b|\bcoding\b", re.IGNORECASE)),
+    ("Computing", re.compile(r"\bcomputer science\b|\bcomputing\b|\bcoding\b", re.IGNORECASE)),
 )
 _GENERAL_SCIENCE = re.compile(r"\bsciences?\b", re.IGNORECASE)
 _NOT_SCIENCE = re.compile(
