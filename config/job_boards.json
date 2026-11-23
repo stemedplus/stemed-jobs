@@ -38,7 +38,7 @@
     {
       "name": "NAAEE eeJOBS",
       "url": "https://jobs.naaee.org/",
-      "disciplines": ["Earth Science", "Science Education"]
+      "disciplines": ["Environmental Science", "Science Education"]
     },
     {
       "name": "ESWN Job Board",
@@ -58,27 +58,27 @@
     {
       "name": "HigherEdJobs",
       "url": "https://www.higheredjobs.com/search/",
-      "disciplines": ["Agriculture", "Bioscience", "Chemistry", "Earth Science", "Engineering", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
+      "disciplines": ["Agriculture", "Astronomy & Space Science", "Bioscience", "Chemistry", "Computing", "Earth Science", "Engineering", "Environmental Science", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
     },
     {
       "name": "HERC Jobs",
       "url": "https://main.hercjobs.org/",
-      "disciplines": ["Agriculture", "Bioscience", "Chemistry", "Earth Science", "Engineering", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
+      "disciplines": ["Agriculture", "Astronomy & Space Science", "Bioscience", "Chemistry", "Computing", "Earth Science", "Engineering", "Environmental Science", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
     },
     {
       "name": "Chronicle Careers",
       "url": "https://jobs.chronicle.com/",
-      "disciplines": ["Agriculture", "Bioscience", "Chemistry", "Earth Science", "Engineering", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
+      "disciplines": ["Agriculture", "Astronomy & Space Science", "Bioscience", "Chemistry", "Computing", "Earth Science", "Engineering", "Environmental Science", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
     },
     {
       "name": "AcademicJobsOnline",
       "url": "https://academicjobsonline.org/ajo/jobs",
-      "disciplines": ["Agriculture", "Bioscience", "Chemistry", "Earth Science", "Engineering", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
+      "disciplines": ["Agriculture", "Astronomy & Space Science", "Bioscience", "Chemistry", "Computing", "Earth Science", "Engineering", "Environmental Science", "Health Education", "History & Philosophy of Science", "Learning Science", "Mathematics", "Physics", "Science & Health Communication", "Science Education"]
     },
     {
       "name": "Science Careers",
       "url": "https://jobs.sciencecareers.org/jobs/",
-      "disciplines": ["Bioscience", "Chemistry", "Earth Science", "Engineering", "Physics", "Science & Health Communication", "Science Education"]
+      "disciplines": ["Astronomy & Space Science", "Bioscience", "Chemistry", "Computing", "Earth Science", "Engineering", "Environmental Science", "Physics", "Science & Health Communication", "Science Education"]
     },
     {
       "name": "MathJobs",

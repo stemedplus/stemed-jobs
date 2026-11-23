@@ -51,10 +51,13 @@ body:
       multiple: true
       options:
         - "Agriculture"
+        - "Astronomy & Space Science"
         - "Bioscience"
         - "Chemistry"
+        - "Computing"
         - "Earth Science"
         - "Engineering"
+        - "Environmental Science"
         - "Health Education"
         - "History & Philosophy of Science"
         - "Human Dimensions"

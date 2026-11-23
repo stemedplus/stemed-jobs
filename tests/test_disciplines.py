@@ -71,7 +71,7 @@ class TitleAndDepartmentTests(unittest.TestCase):
             "Assistant Professor of Science Education",
             "The Department of Physics and Astronomy seeks a science education researcher.",
         )
-        self.assertEqual(disciplines, ["Physics", "Science Education"])
+        self.assertEqual(disciplines, ["Astronomy & Space Science", "Physics", "Science Education"])
 
     def test_hiring_department_wins_over_collaborating_department(self):
         disciplines = classify_disciplines(
@@ -178,7 +178,7 @@ class SubfieldTests(unittest.TestCase):
         for title in (
             "Assistant Professor of Geophysics", "Postdoc in Hydrology", "Lecturer in Atmospheric Science",
             "Assistant Professor of Paleontology", "Instructor of Oceanography", "Seismology Postdoctoral Fellow",
-            "Assistant Professor of Planetary Science", "Lecturer in Soil Science", "Geology Instructor",
+            "Planetary Geology Postdoc", "Lecturer in Soil Science", "Geology Instructor",
         ):
             self.assertIn("Earth Science", classify_disciplines(title, ""), title)
 
@@ -200,12 +200,20 @@ class SubfieldTests(unittest.TestCase):
     def test_biochemistry_is_listed_under_chemistry_and_bioscience(self):
         self.check("Assistant Professor of Biochemistry", ["Bioscience", "Chemistry"])
 
-    def test_physics_includes_astronomy_and_space_science(self):
+    def test_astronomy_and_space_science_is_its_own_discipline(self):
         for title in (
             "Assistant Professor of Astronomy", "Lecturer in Astrophysics", "Postdoc in Space Science",
             "Instructor of Planetary Sciences", "Assistant Professor of Cosmology", "Heliophysics Postdoc",
         ):
-            self.assertIn("Physics", classify_disciplines(title, ""), title)
+            found = classify_disciplines(title, "")
+            self.assertIn("Astronomy & Space Science", found, title)
+            self.assertNotIn("Physics", found, title)
+
+    def test_environmental_science_is_its_own_discipline(self):
+        for title in ("Lecturer in Environmental Science", "Environmental Studies Instructor"):
+            found = classify_disciplines(title, "")
+            self.assertIn("Environmental Science", found, title)
+            self.assertNotIn("Earth Science", found, title)
 
     def test_biomedical_engineering_is_still_not_bioscience(self):
         self.check("Assistant Professor of Biomedical Engineering", ["Engineering"])

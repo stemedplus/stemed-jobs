@@ -49,7 +49,7 @@
     {
       "name": "Chronicle Careers - Physics & Space Sciences",
       "url": "https://jobs.chronicle.com/jobsrss/?PositionType=81&countrycode=US",
-      "disciplines": ["Physics"],
+      "disciplines": ["Astronomy & Space Science", "Physics"],
       "retain_days": 90
     },
     {

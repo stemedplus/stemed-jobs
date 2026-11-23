@@ -77,8 +77,10 @@ class RssImporterTests(unittest.TestCase):
             ("GER Graduate Fellow", "Earth Science", ["graduates"], True),
             ("Earth Science Education Researcher", "Earth Science", ["postdocs"], True),
             ("Geoscience Education Faculty", "Earth Science", ["faculty"], True),
-            ("Environmental Education Postdoc", "Earth Science", ["postdocs"], True),
-            ("Environmental Science Education Fellow", "Earth Science", ["graduates"], True),
+            ("Environmental Education Postdoc", "Environmental Science", ["postdocs"], True),
+            ("Environmental Science Education Fellow", "Environmental Science", ["graduates"], True),
+            ("Astronomy Education Research Postdoc", "Astronomy & Space Science", ["postdocs"], True),
+            ("Computer Science Teaching Professor", "Computing", ["faculty"], True),
             ("BER Postdoctoral Fellow", "Bioscience", ["postdocs"], True),
             ("Bioscience Education Researcher", "Bioscience", ["faculty"], True),
             ("Biology Education Graduate Fellow", "Bioscience", ["graduates"], True),
@@ -440,7 +442,7 @@ class RssImporterTests(unittest.TestCase):
             faculty_feed = ElementTree.parse(feed_directory / "faculty" / "chemistry.xml")
             postdoc_feed = ElementTree.parse(feed_directory / "postdocs" / "physics.xml")
 
-        self.assertEqual(count, 70)  # 5 audiences x 14 disciplines
+        self.assertEqual(count, 85)  # 5 audiences x 17 disciplines
         self.assertEqual(len(graduate_feed.findall("./channel/item")), 1)
         self.assertEqual(_job_titles(faculty_feed), [])
         self.assertEqual(_job_titles(postdoc_feed), [])
@@ -480,10 +482,13 @@ class RssImporterTests(unittest.TestCase):
             DISCIPLINES,
             (
                 "Agriculture",
+                "Astronomy & Space Science",
                 "Bioscience",
                 "Chemistry",
+                "Computing",
                 "Earth Science",
                 "Engineering",
+                "Environmental Science",
                 "Health Education",
                 "History & Philosophy of Science",
                 "Human Dimensions",

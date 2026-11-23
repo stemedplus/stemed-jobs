@@ -22,7 +22,7 @@ class CurriculumRoleTests(unittest.TestCase):
     def test_a_named_discipline_lists_the_job_under_that_discipline(self):
         self.assertEqual(feeds("Biology Curriculum Specialist"), {("staff", "Bioscience")})
         self.assertEqual(feeds("Math Curriculum Writer"), {("staff", "Mathematics")})
-        self.assertEqual(feeds("Computer Science Curriculum Coordinator"), {("staff", "Engineering")})
+        self.assertEqual(feeds("Computer Science Curriculum Coordinator"), {("staff", "Computing")})
         self.assertEqual(feeds("Science Curriculum Writer, Grades 6-8"), {("staff", "Science Education")})
 
     def test_general_stem_lists_the_job_under_every_discipline_but_steam(self):
