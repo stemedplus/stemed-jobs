@@ -20,7 +20,7 @@ from stemed_jobs.importers.rss import fetch_all
 from stemed_jobs.storage.board_store import write_board
 from stemed_jobs.storage.html_store import write_audience_html, write_index_html
 from stemed_jobs.storage.json_store import write_jobs
-from stemed_jobs.storage.rss_store import AUDIENCES, write_rss_feeds
+from stemed_jobs.storage.rss_store import ALL_FEED, AUDIENCES, write_rss_feeds
 from stemed_jobs.submitted import load as load_submitted
 
 
@@ -148,7 +148,7 @@ def main() -> int:
         return 2
 
     print("Wrote {} jobs from {} feed(s) to {}.".format(len(jobs), len(feeds) - len(errors), args.output))
-    print("Wrote {} audience/discipline RSS feeds to {}.".format(feed_count, args.feed_output))
+    print("Wrote {} audience/discipline RSS feeds and {} (every job) to {}.".format(feed_count, ALL_FEED, args.feed_output))
     print("Wrote the jobs page with {} listed job(s) (board.json).".format(listed))
     print("Wrote Pages index and audience HTML sections for {} to {}.".format(", ".join(AUDIENCES), args.html_output))
     for entry in carried.status.values():

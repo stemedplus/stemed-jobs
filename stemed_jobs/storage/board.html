@@ -67,6 +67,8 @@
   .join-bottom { margin: 0 0 16px; }
 </style>
 <link rel="stylesheet" href="stemedplus-theme.css">
+<link rel="alternate" type="application/rss+xml" title="STEMEd+ Jobs: all jobs" href="feeds/all.xml">
+<link rel="alternate" type="application/json" title="STEMEd+ Jobs: data" href="jobs.json">
 </head>
 <body>
 %%BAR%%
@@ -121,7 +123,8 @@
     <h2 id="add">Post a job</h2>
     <p>Hiring for a position in STEM+ education research or teaching? <a id="post" href="#">Post it with the GitHub form</a>, or use our <a href="https://stemedplus.org/contact-us/">contact form</a> and include the position title, institution, location, who it is for, a link to the official posting, the application deadline, and a short description. We review each position before it appears. It stays listed until shortly after its application deadline, or for the hiring year if no deadline is given.</p>
     <h2 id="rss">RSS feeds</h2>
-    <p>Follow new jobs in a feed reader, one feed for each audience and discipline:</p>
+    <p>Follow every new job with one feed: <a href="feeds/all.xml">all jobs (RSS)</a>. All jobs are also available as <a href="jobs.json">data (JSON)</a> for other sites and tools.</p>
+    <p>Or follow one audience and discipline:</p>
     <div class="feedpick">
       <div><label for="faud">Who it's for</label><select id="faud"></select></div>
       <div><label for="fdisc">Discipline</label><select id="fdisc"></select></div>
